@@ -42,22 +42,139 @@
       Valor em Iene:113,35 <br>
       Valor em Won:1.181,50  </p>
     <p>Coloque o valor na moeda de sua escolha e será mostrado a conversão em todas as moedas</p>
-    <input><button type="button">Real</button>
-    <input><button type="button">Dolar</button>
-    <input><button type="button">Euro</button>
-    <input><button type="button">Libra</button>
-    <input><button type="button">Rubro</button>
-    <input><button type="button">Iene</button>
-    <input><button type="button">Won</button>
+    <input id="inputreal"><button type="button" id="real" onclick="convReal()">Real</button></input>
+    <input id="inputdolar"><button type="button" id="dolar" onclick="convDolar()">Dolar</button></input>
+    <input id="inputeuro"><button type="button" id="euro" onclick="convEuro()">Euro</button>
+    <input id="inputlibra"><button type="button" id="libra" onclick="convLibra()">Libra</button>
+    <input id="inputrubro"><button type="button" id="rubro" onclick="convRubro()">Rubro</button>
+    <input id="inputiene"><button type="button" id="iene" onclick="convIene()">Iene</button>
+    <input id="inputwon"><button type="button" id="won" onclick="convWon()">Won</button>
     <div class="div_back">
-<p>Valor em Dolar: <br>
-Valor em Real: <br>
-Valor em Euro: <br>
-Valor em Libra: <br>
-Valor em Rubro: <br>
-Valor em Iene: <br>
-Valor em Won: </p><br>
+<p>Valor em Dolar: <normal id="digitado1"></normal><br>
+Valor em Real: <normal id="digitado2"></normal><br>
+Valor em Euro: <normal id="digitado3"></normal><br>
+Valor em Libra: <normal id="digitado4"></normal><br>
+Valor em Rubro: <normal id="digitado5"></normal><br>
+Valor em Iene: <normal id="digitado6"></normal><br>
+Valor em Won:  <normal id="digitado7"></normal><br>
+</p>
 </div>
-<script></script>
-        </body>
+<script>
+  function convReal() {
+    var real = document.getElementById("inputreal").value;
+    var dolar = real / 5.54;
+    document.getElementById("digitado1").innerHTML = dolar; 
+    document.getElementById("digitado2").innerHTML = real; 
+    var euro = real / 6.31;
+    document.getElementById("digitado3").innerHTML = euro; 
+    var libra = real / 7.37;
+    document.getElementById("digitado4").innerHTML = libra; 
+    var rubro = real / 0.077;
+    document.getElementById("digitado5").innerHTML = rubro; 
+    var iene = real / 0.048;
+    document.getElementById("digitado6").innerHTML = iene; 
+    var won = real / 0.0046;
+    document.getElementById("digitado7").innerHTML = won; 
+  }
+  function convDolar() {
+    var dolar = document.getElementById("inputdolar").value;
+    document.getElementById("digitado1").innerHTML = dolar;
+    var real = dolar / 0.18; 
+    document.getElementById("digitado2").innerHTML = real; 
+    var euro = dolar / 1.15;
+    document.getElementById("digitado3").innerHTML = euro; 
+    var libra = dolar / 1.34;
+    document.getElementById("digitado4").innerHTML = libra; 
+    var rubro = dolar / 0.014;
+    document.getElementById("digitado5").innerHTML = rubro; 
+    var iene = dolar / 0.0088;
+    document.getElementById("digitado6").innerHTML = iene; 
+    var won = dolar / 0.00084;
+    document.getElementById("digitado7").innerHTML = won; 
+  }
+  function convEuro() {
+    var euro = document.getElementById("inputeuro").value;
+    var dolar = euro / 0.87;
+    document.getElementById("digitado1").innerHTML = dolar;
+    var real = euro / 0.16; 
+    document.getElementById("digitado2").innerHTML = real; 
+    document.getElementById("digitado3").innerHTML = euro;
+    var libra = euro / 1.17;
+    document.getElementById("digitado4").innerHTML = libra; 
+    var rubro = euro / 0.012;
+    document.getElementById("digitado5").innerHTML = rubro; 
+    var iene = euro / 0.0076;
+    document.getElementById("digitado6").innerHTML = iene; 
+    var won = euro / 0.00073;
+    document.getElementById("digitado7").innerHTML = won; 
+  }
+  function convLibra() {
+    var libra = document.getElementById("inputlibra").value;
+    var dolar = libra / 0.75;
+    document.getElementById("digitado1").innerHTML = dolar;
+    var real = libra / 0.14; 
+    document.getElementById("digitado2").innerHTML = real; 
+    var euro = libra / 0.86;
+    document.getElementById("digitado3").innerHTML = euro;
+    document.getElementById("digitado4").innerHTML = libra; 
+    var rubro = libra / 0.010;
+    document.getElementById("digitado5").innerHTML = rubro; 
+    var iene = libra / 0.0065;
+    document.getElementById("digitado6").innerHTML = iene; 
+    var won = libra / 0.00063;
+    document.getElementById("digitado7").innerHTML = won; 
+  }
+  function convRubro() {
+    var rubro = document.getElementById("inputrubro").value;
+    var dolar = rubro / 71.29;
+    document.getElementById("digitado1").innerHTML = dolar;
+    var real = rubro / 12.98; 
+    document.getElementById("digitado2").innerHTML = real; 
+    var euro = rubro / 81.86;
+    document.getElementById("digitado3").innerHTML = euro;
+    var libra = rubro / 95.59;
+    document.getElementById("digitado4").innerHTML = libra; 
+    document.getElementById("digitado5").innerHTML = rubro; 
+    var iene = rubro / 0.63;
+    document.getElementById("digitado6").innerHTML = iene; 
+    var won = rubro / 0.060;
+    document.getElementById("digitado7").innerHTML = won; 
+  }
+  function convIene() {
+    var iene = document.getElementById("inputiene").value;
+    var dolar = iene / 113.95;
+    document.getElementById("digitado1").innerHTML = dolar;
+    var real = iene / 20.75; 
+    document.getElementById("digitado2").innerHTML = real; 
+    var euro = iene / 130.85;
+    document.getElementById("digitado3").innerHTML = euro;
+    var libra = iene / 152.75;
+    document.getElementById("digitado4").innerHTML = libra; 
+    var rubro = iene / 1.60;
+    document.getElementById("digitado5").innerHTML = rubro; 
+    document.getElementById("digitado6").innerHTML = iene; 
+    var won = iene / 0.096;
+    document.getElementById("digitado7").innerHTML = won; 
+  }
+  function convWon() {
+    var won = document.getElementById("inputwon").value;
+    var dolar = won / 1184.93;
+    document.getElementById("digitado1").innerHTML = dolar;
+    var real = won / 215.73; 
+    document.getElementById("digitado2").innerHTML = real; 
+    var euro = won / 1360.45;
+    document.getElementById("digitado3").innerHTML = euro;
+    var libra = won / 1589.00;
+    document.getElementById("digitado4").innerHTML = libra; 
+    var rubro = won / 16.62;
+    document.getElementById("digitado5").innerHTML = rubro;
+    var iene = won / 10.40;
+    document.getElementById("digitado6").innerHTML = iene; 
+    document.getElementById("digitado7").innerHTML = won; 
+  }
+
+
+    
+</script>
+</body>
 </html>

@@ -33,17 +33,134 @@
     </header>
     <center><img src="img/formas1.jpg" ></center>
 <h2>Escolha a forma e insira os dados</h2>
+<!-- volume -->
 <h3>Volume do Cilindro</h3>
 <form>
     <label>Raio</label>
-    <input>
+    <input id="av">
     <label>Altura</label>
-    <input>
-    <input type="submit" value="Submit">
+    <input id="bv">
+    <input type="button" value="Submit" onclick="volume()">
   </form>
-<p>O volume do cilindro é:</p>
+<p id="recebev">O volume do cilindro é:</p>
 
 
-<script></script>
+<!-- area da base -->
+<h3>Area da base</h3>
+<label>Raio</label>
+    <input id="aa">
+    <input type="button" value="Submit" onclick="areabase()">
+  </form>
+<p id="recebeab">A area da base do cilindro é:</p>
+
+<!-- area lateral -->
+<h3>Area da lateral</h3>
+<label>Raio</label>
+    <input id="aal">
+    <label>Altura</label>
+    <input id="bal">
+    <input type="button" value="Submit" onclick="arealateral()">
+  </form>
+<p id="recebeal">A area lateral do cilindro é:</p>
+
+
+<!-- area total -->
+<h3>Area da total</h3>
+<label>Raio</label>
+    <input id="aat">
+    <label>Altura</label>
+    <input id="bat">
+    <input type="button" value="Submit" onclick="calcularareatotal()">
+  </form>
+<p id="recebeat">A area total do cilindro é:</p>
+
+<!-- perimetro do cilindro -->
+<h3>Perimetro do Cilindro</h3>
+  <form>
+    <label>Raio</label>
+    <input id="acil">
+    <input type="button" value="Submit" onclick="perimetrocil()">
+  </form>
+<p id="recebecil">O perimetro do cilindro é:</p>
+<!-- area do circulo -->
+<h3>Area do circulo</h3>
+  <form>
+    <label>Raio</label>
+    <input id="aacir">
+    <input type="button" value="Submit" onclick="calcularareacirculo()">
+  </form>
+<p id="recebeacil">Area do circulo é:</p>
+
+
+<!-- perimetro do circulo -->
+<h3>Perimetro do Circulo</h3>
+  <form>
+    <label>Raio</label>
+    <input id="acir">
+    <input type="button" value="Submit" onclick="perimetrocir()">
+  </form>
+<p id="recebecir">O perimetro do circulo é:</p>
+
+<script>
+//volume
+function volume() {
+    var raio = parseFloat(document.getElementById("av").value);
+    var altura = parseFloat(document.getElementById("bv").value);
+    document.getElementById("recebev").innerHTML = "O volume do cilindro é: " + (Math.PI*raio**2*altura).toFixed(2)
+        };
+
+
+
+//area da base
+function areabase() {
+    var raio = (document.getElementById("aa").value);
+    var raioquadrado = (raio**2)
+    var pi = (Math.PI * raioquadrado)
+     document.getElementById("recebeab").innerHTML = "A area da base do cilindro é: " + pi.toFixed(2);
+    };
+
+//area lateral
+function arealateral(){
+    var area_lateral_cilindro;
+    var resutado_area_lateral = document.getElementById("recebeal");
+    var valor_a = parseFloat(document.getElementById("aal").value);
+    var valor_b = parseFloat(document.getElementById("bal").value);
+    area_lateral_cilindro = 2 * Math.PI * valor_a * valor_b
+    resutado_area_lateral.innerHTML = `A area lateral do cilindro é ${area_lateral_cilindro.toFixed(2)}`
+}
+
+
+//perimetro do cilindro
+function perimetrocil() {
+  var raio = parseFloat(document.getElementById("acil").value)
+  var altura = parseFloat(document.getElementById("bcil").value)
+  document.getElementById("recebecil").innerHTML = "O perimetro do cilindro é: " + (2*Math.PI*raio).toFixed(2)
+};
+
+// area do ciurculo 
+function calcularareacirculo(){
+    var areacirculo
+    var resultadoareacirculo=document.getElementById("recebeacil");
+    var valorraioareacirculo=parseFloat(document.getElementById("aacir").value);
+    areacirculo = Math.PI * (valorraioareacirculo*valorraioareacirculo)
+    resultadoareacirculo.innerHTML=`Area do circulo é: ${areacirculo.toFixed(2)}`
+}
+
+
+//perimetro do circulo
+function perimetrocir() {
+  var raio = parseFloat(document.getElementById("acir").value)
+  document.getElementById("recebecir").innerHTML = "O perimetro do cilindro é: " + (2*Math.PI*raio).toFixed(2)
+};
+//area total
+function calcularareatotal() {
+    var raio = document.getElementById("aat").value
+    var altura = document.getElementById("bat").value
+    raio = parseFloat(raio)
+    altura = parseFloat(altura)
+    var resultado = Math.PI * 2 * raio * (raio + altura)
+    document.getElementById("recebeat").innerHTML = "Area total do cilindro é: " + resultado.toFixed(2);
+};
+</script>
         </body>
 </html>

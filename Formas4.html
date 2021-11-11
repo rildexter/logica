@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" >
+	<script type="text/javascript" src="js/funcs.js"></script>
     <title>Calculadora Geometrica</title>
 </head>
 <body>
@@ -33,20 +34,87 @@
     </header>
     <center><img src="img/formas4.jpg" ></center>
 <h2>Escolha a forma e insira os dados</h2>
-<h3>A área do Trapézio</h3>
+<h3>A área do Triangulo equi</h3>
 <form>
-    <label>Base maior</label>
-    <input>
-    <label>Base menor</label>
-    <input>
-    <label>Altura</label>
-    <input>
-    <input type="submit" value="Submit">
+    <label>Altura: </label>
+    <input id = "a">
+    <button type ="button" onclick="clicando1()">fazer conta</button>
+    <p>A área do triângulo Equilatero é:<normal id="receber1"></normal></p>
   </form>
-<p>A área do Trapézio é:</p>
-
-
-
+  <h3>Volume do triângulo Equilatero</h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <label>Base: </label>
+    <input id = "b">
+    <button type ="button" onclick="clicando2()">fazer conta</button>
+    <p>Volume do triângulo Equilatero é:<normal id="receber2"></normal></p>
+  </form>
+<h3>Perimetro do Triangulo equilatero</h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <button type ="button" onclick="clicando3()">fazer conta</button>
+    <p>Perimetro triângulo retângulo é:<normal id="receber3"></normal></p>
+  </form>
+<h3>Triângulo isósceles área</h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <label>Base: </label>
+    <input id = "b">
+    <button type ="button" onclick="clicando4()">fazer conta</button>
+    <p>Triângulo isósceles área:<normal id="receber4"></normal></p>
+  </form>
+  <h3>Volume Triângulo isósceles </h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <label>Profundidade: </label>
+    <input id = "c">
+    <label>Base: </label>
+    <input id = "b">
+    <button type ="button" onclick="clicando5()">fazer conta</button>
+    <p>O Volume do triângulo isósceles é:<normal id="receber5"></normal></p>
+  </form>
+  <h3>Perimetro do Triângulo isosceles</h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <label>Base: </label>
+    <input id = "b">
+    <button type ="button" onclick="clicando6()">fazer conta</button>
+    <p>Perimetro do Triângulo isosceles:<normal id="receber6"></normal></p>
+  </form>
+<h3>Triângulo Retângulo area</h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <label>Base: </label>
+    <input id = "b">
+    <button type ="button" onclick="clicando7()">fazer conta</button>
+    <p>A área do triângulo retângulo é:<normal id="receber7"></normal></p>
+  </form>
+  <h3>Volume do Triângulo Retângulo:</h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <label>Profundidade: </label>
+    <input id = "c">
+    <label>Base: </label>
+    <input id = "b">
+    <button type ="button" onclick="clicando8()">fazer conta</button>
+    <p>Volume do triângulo retângulo é:<normal id="receber8"></normal></p>
+  </form>
+  <h3>Perimetro do Triângulo Retângulo</h3>
+<form>
+    <label>Altura: </label>
+    <input id = "a">
+    <label>Base: </label>
+    <input id = "b">
+    <button type ="button" onclick="clicando9()">fazer conta</button>
+    <p>O perímetro do triângulo retângulo é:<normal id="receber9"></normal></p>
+  </form>
 <script></script>
         </body>
 </html>

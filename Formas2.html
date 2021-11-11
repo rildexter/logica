@@ -12,7 +12,7 @@
                 <h1>Calculadora Geometrica</h1>
               </div>
       <header> 
-        <div class="row">
+
             <div class="col">
              
             </div>
@@ -33,14 +33,144 @@
     </header>
     <center><img src="img/formas2.jpg" ></center>
 <h2>Escolha a forma e insira os dados</h2>
+
+<!--area da esfera-->
 <h3>A área da esfera</h3>
 <form>
     <label>Raio</label>
-    <input>
-    <input type="submit" value="Submit">
+    <input type="text" id="area" name="name">
+    <button type="button" onclick="function_area()">Enviar</button>
   </form>
-<p>A área da esfera é:</p>
+    <p>A área da esfera é:</p>
+    <p><normal id="resp_area"></normal></p>
+<!--volume da esfera-->
+    <h3>O volume da esfera</h3>
+    <label>Raio</label>
+    <input type="text" id="volume" name="name">
+    <button type="button" onclick="function_volume()">Enviar</button><br>
+    <p>O volume da esfera é:</p>
+    <p><normal id="resp_volume"></normal></p>
 
-<script></script>
+<!--area do losango-->
+    <h3>Área do losango</h3>
+    <label>diagonal maior</label>
+    <input id="Diagonal maior">
+
+    <label>diagonal menor</label>
+    <input id="Diagonal menor">
+
+    <button type="button" onclick="calcular3()">calcular</button><br>
+    <p>Área do losango: <normal id="resultado3"></normal></p>
+
+<!--volume do losango-->
+    <h3>Volume do losango</h3>
+    <label>diagonal maior</label>
+    <input id='diagonalM'> <br> 
+    <label>diagonal menor</label>
+    <input id='diagonalm'> <br>
+    <label>profundidade</label>
+    <input id='profundidade'>
+    <button type="button" onclick="volume()">Valor</button>
+    <p>O volume do losango é: <normal id='valor'></normal></p>
+
+<!--perímetro do losango-->
+    <h3>Perímetro do losango</h3>
+    <label>lado1</label>
+    <input id="lado 1">
+
+    <button type="button" onclick="calcular2()">calcular</button><br>
+    <p>Perímetro do losango: <normal id="resultado2"></normal></p>
+
+<!--area do trapezio-->
+    <h3>Area do trapezio</h3>
+    <label>Altura</label>
+    <input  id="altura"><br>
+   
+    <label>Base maior</label>
+    <input  id="base_maior"><br>
+    
+    <label>Base menor</label>
+    <input  id="base_menor">
+    
+    <button type="button" onclick="calcular()">calcular</button><br>   
+    <p>Area do trapezio: <normal id="resultado"></normal></p>
+
+<!--volume do trapezio-->
+    <h3>Volume do Trapézio</h3>
+    <form>
+        <label>Base maior</label>
+        <input type="text" id="maior" name="name">
+      
+        <label>Base menor</label>
+        <input type="text" id="menor" name="name">
+
+        <label>Altura</label>
+        <input type="text" id="altura1" name="name">
+
+        <label>Altura do Prisma</label>
+        <input type="text" id="altura2" name="name"><br><br>
+
+        <button type="button" onclick="volumeTrapezio()">Enviar</button><br>
+      </form>
+            <p>O volume do Trapézio é:</p>
+            <p><normal id="respostaTrapezio"></normal></p>
+
+
+    <script>
+        function function_area() {
+            var valor;
+            valor = document.getElementById('area').value;
+            document.getElementById('resp_area').innerHTML = parseInt(4)* parseFloat(3.14) * parseInt(valor**2);
+        }
+        function function_volume(){
+            var valor2;
+            valor2 = document.getElementById('volume').value;
+            document.getElementById('resp_volume').innerHTML = (parseInt(4)* parseFloat(3.14) * parseInt(valor2**3)/parseInt(3));
+        }
+        function calcular3(){
+            diagonal_maior =document.getElementById("Diagonal maior").value;
+            diagonal_menor=document.getElementById("Diagonal menor").value;
+            result=(diagonal_maior * diagonal_menor)/2;
+            document.getElementById("resultado3").innerHTML = result;
+        }
+        function volume(){
+            a = document.getElementById('diagonalM').value;
+            b = document.getElementById('diagonalm').value;
+            c = document.getElementById('profundidade').value;
+            results = ((a * b ) / 2) * c;
+            document.getElementById('valor').innerHTML = results;
+        }
+        function calcular2(){
+            lado_1 =document.getElementById("lado 1").value;
+            document.getElementById("resultado2").innerHTML = (lado_1 * parseInt(4));
+        }
+        function calcular(){
+          var resultado;
+            base_M =document.getElementById("base_maior").value;
+            base_m =document.getElementById("base_menor").value;
+            h = document.getElementById("altura").value;
+        
+            resultado =(((parseInt(base_m) + parseInt(base_M)) * parseInt(h))  / parseInt(2)); 
+            document.getElementById("resultado").innerHTML = resultado;
+        }  
+        function volumeTrapezio(){
+            var a;
+            a = document.getElementById('maior').value;
+          
+            var b;
+            b = document.getElementById('menor').value;
+          
+            var c;
+            c = document.getElementById('altura1').value;
+          
+            var d;
+            d = document.getElementById('altura2').value;
+          
+            document.getElementById('respostaTrapezio').innerHTML = ((parseInt(a) + parseInt(b)) * parseInt(c) / parseInt(2)) * parseInt(d);
+        }
+
+
+    </script>
         </body>
 </html>
+

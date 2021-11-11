@@ -33,17 +33,173 @@
     </header>
     <center><img src="img/formas3.jpg" ></center>
 <h2>Escolha a forma e insira os dados</h2>
-<h3>A área do Paralelograma</h3>
+
+
+<h2>O PARALELOGRAMO</h2>
+<h3>A área do Paralelogramo</h3>
 <form>
     <label>Base</label>
-    <input>
+    <input id="basep1">
     <label>Altura</label>
-    <input>
-    <input type="submit" value="Submit">
+    <input id="alturap1">
+    <input type="button" value="Submit" onclick="areap1()">
   </form>
-<p>A área do Paralelograma é:</p>
+  <p>A área do Paralelogramo é: <normal id="areap"></normal></p>
+  <h3>O volume do Paralelogramo</h3>
+  <form>
+    <label>Base</label>
+    <input id="basep2">
+    <label>Altura</label>
+    <input id="alturap2">
+    <label>Profundidade</label>
+    <input id="profundidadep2">
+    <input type="button" value="Submit" onclick="volumep1()">
+  </form>
+<p>O volume do Paralelogramo é: <normal id="volumep"></normal></p>
+<h3>O perímetro do Paralelogramo</h3>
+  <form>
+    <label>Base</label>
+    <input id="basep3">
+    <label>Altura</label>
+    <input id="alturap3">
+    <input type="button" value="Submit" onclick="perimetrop1()">
+  </form>
+<p>O perímetro do Paralelograma é: <normal id="perimetrop"></normal></p><br>
+<!--Aqui terminao paralelogramo e começa o quadrado-->
 
+<h2>O QUADRADO</h2>
+<h3>A área do Quadrado</h3>
+<form>
+    <label>Base</label>
+    <input id="baseq1">
+    <label>Altura</label>
+    <input id="alturaq1">
+    <input type="button" value="Submit" onclick="areaq1()">
+  </form>
+  <p>A área do Quadrado é: <normal id="areaq"></normal></p>
+  <h3>O volume do Quadrado</h3>
+  <form>
+    <label>Base</label>
+    <input id="baseq2">
+    <label>Altura</label>
+    <input id="alturaq2">
+    <label>Profundidade</label>
+    <input id="profundidadeq2">
+    <input type="button" value="Submit" onclick="volumeq1()">
+  </form>
+<p>O volume do Quadrado é: <normal id="volumeq"></normal></p>
+<h3>O perímetro do Quadrado</h3>
+  <form>
+    <label>Base</label>
+    <input id="baseq3">
+    <label>Altura</label>
+    <input id="alturaq3">
+    <input type="button" value="Submit" onclick="perimetroq1()">
+  </form>
+<p>O perímetro do Quadrado é: <normal id="perimetroq"></normal></p><br>
+<!--Aqui termina o quadrado e começa o Retângulo-->
+<h2>O RETÂNGULO</h2>
+<h3>A área do Retângulo</h3>
+<form>
+    <label>Base</label>
+    <input id="baser1">
+    <label>Altura</label>
+    <input id="alturar1">
+    <input type="button" value="Submit" onclick="arear1()">
+  </form>
+  <p>A área do Retângulo é: <normal id="arear"></normal></p>
+  <h3>O volume do Retângulo</h3>
+  <form>
+    <label>Base</label>
+    <input id="baser2">
+    <label>Altura</label>
+    <input id="alturar2">
+    <label>Profundidade</label>
+    <input id="profundidader2">
+    <input type="button" value="Submit" onclick="volumer1()">
+  </form>
+<p>O volume do Retângulo é: <normal id="volumer"></normal></p>
+<h3>O perímetro do Retângulo</h3>
+  <form>
+    <label>Base</label>
+    <input id="baser3">
+    <label>Altura</label>
+    <input id="alturar3">
+    <input type="button" value="Submit" onclick="perimetror1()">
+  </form>
+<p>O perímetro do Quadrado é: <normal id="perimetror"></normal></p>
 
-<script></script>
+<script>
+  var alturap = 0
+  var basep = 0
+  var profundidadep = 0
+  
+  var alturaq = 0
+  var baseq = 0
+  var profundidadeq = 0
+  
+  var alturar = 0
+  var baser = 0
+  var profundidader = 0 
+  
+  function areap1(){
+  alturap = document.getElementById("alturap1").value;
+  basep = document.getElementById("basep1").value;
+  document.getElementById("areap").innerHTML = alturap * basep
+  }
+  
+  function volumep1(){
+  alturap = document.getElementById("alturap2").value;
+  basep = document.getElementById("basep2").value;
+  profundidadep = document.getElementById("profundidadep2").value;
+  document.getElementById("volumep").innerHTML = alturap * basep * profundidadep
+  }
+
+  function perimetrop1(){
+  alturap = document.getElementById("alturap3").value;
+  basep = document.getElementById("basep3").value;
+  document.getElementById("perimetrop").innerHTML = (2 * alturap) + (2 * basep)
+  }
+
+  function areaq1(){
+  alturaq = document.getElementById("alturaq1").value;
+  baseq = document.getElementById("baseq1").value;
+  document.getElementById("areaq").innerHTML = alturaq * baseq
+  }
+  
+  function volumeq1(){
+  alturaq = document.getElementById("alturaq2").value;
+  baseq = document.getElementById("baseq2").value;
+  profundidadeq = document.getElementById("profundidadeq2").value;
+  document.getElementById("volumeq").innerHTML = alturaq * baseq * profundidadeq
+  }
+
+  function perimetroq1(){
+  alturaq = document.getElementById("alturaq3").value;
+  baseq = document.getElementById("baseq3").value;
+  document.getElementById("perimetroq").innerHTML = (2 * alturaq) + (2 * baseq)
+  }
+
+  function arear1(){
+  alturar = document.getElementById("alturar1").value;
+  baser = document.getElementById("baser1").value;
+  document.getElementById("arear").innerHTML = alturar * baser
+  }
+  
+  function volumer1(){
+  alturar = document.getElementById("alturar2").value;
+  baser = document.getElementById("baser2").value;
+  profundidader = document.getElementById("profundidader2").value;
+  document.getElementById("volumer").innerHTML = alturar * baser * profundidader
+  }
+
+  function perimetror1(){
+  alturar = document.getElementById("alturar3").value;
+  baser = document.getElementById("baser3").value;
+  document.getElementById("perimetror").innerHTML = (2 * alturar) + (2 * baser)
+  }
+
+  </script>
+
         </body>
 </html>
